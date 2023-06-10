@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <style>
+      .datos {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <hgroup>
+        <h1>Crea una cuenta</h1>
+        <h2>Ingresa la siguiente información para registrarte.</h2>
+      </hgroup>
+      <div class="datos">
+        <input type="text" placeholder="Nombres" />
+        <input type="text" placeholder="Apellidos" />
+      </div>
+
+      <input type="email" placeholder="Email: Ej. user@gmail.com" />
+
+      <input type="tel" placeholder="Teléfono" />
+      <input type="password" placeholder="Password" />
+      <input type="password" placeholder="Confirm password" />
+      <input type="submit" value="Registrarse" />
+
+      <p>
+        Ya tienes una cuenta?
+        <a href="login.html">Accede desde aquí</a>
+      </p>
+    </main>
+  </body>
+</html>
