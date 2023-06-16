@@ -81,4 +81,5 @@ main {
   display: flex;
   gap: 15px;
   justify-content: center;
+  cursor: pointer;
 }
