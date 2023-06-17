@@ -21,6 +21,103 @@
   --neutral-white: hsl(0, 0%, 100%);
 }
 
-body {
-  background-color: black;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: var(--primary-dark-blue-into);
+  color: var(--neutral-white);
+  font-size: var(--font-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Responsive styles!! */
+.wrapper {
+  width: min(
+    100% - 5rem,
+    1440px
+  ); /* css function to make the nav width responsive!! */
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  font-family: var(--font-primary);
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.header_nav {
+  list-style: none;
+  border: 1px solid red;
+
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* 1rem = 16px*/
+}
+
+.hero {
+  border: 1px solid red;
+  display: flex; /*flex by default makes eveything iccupies the 100% of the vp width, so we need to set the align items to set the original size*/
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  width: min(100% - 3rem, 720px);
+  /* if I wish to use this command and center it to the screen, i need to use margin and auto margins for left and right */
+  margin: 0 auto;
+  background: var(--primary-dark-blue-into) url(./images/bg-curvy-desktop.svg)
+    no-repeat bottom;
+  background-size: contain;
+  padding-top: 3rem;
+}
+
+.hero_title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 2.5rem;
+  line-height: 1.5;
+  text-align: left;
+  width: min(100% - 3rem, 720px);
+}
+
+.hero_text {
+  font-family: var(--font-secondary);
+  padding: 0 7rem;
+  line-height: 1.5;
+  text-align: justify;
+  width: min(100% - 3rem, 720px);
+}
+.hero_button {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  padding: 1rem 1.5rem;
+  line-height: 1.5;
+  border: none;
+  border-radius: 7rem;
+  min-width: 220px;
+  color: var(--neutral-white);
+  background: linear-gradient(
+    90deg,
+    var(--accent-cyan-gradient) 0%,
+    var(--accent-blue-gradient) 35%
+  );
+}
+/* 3:38:0 */
