@@ -87,6 +87,7 @@ img {
     no-repeat bottom;
   background-size: contain;
   padding-top: 3rem;
+  margin-top: 3rem;
 }
 
 .hero_title {
@@ -120,4 +121,70 @@ img {
     var(--accent-blue-gradient) 35%
   );
 }
-/* 3:38:0 */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 5rem;
+  border: 1px solid yellow;
+  width: min(100% - 3rem, 720px);
+  margin: 8rem auto;
+  background-color: var(--primary-dark-blue-main);
+}
+.feature {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.feature_title {
+  font-family: var(--font-primary);
+}
+.feature_description {
+  font-family: var(--font-secondary);
+}
+.workflow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100% - 3rem, 900px);
+  margin: 100px auto;
+  gap: 4rem;
+  background-color: var(--primary-dark-blue-main);
+}
+.workflow > img {
+  width: 450px;
+}
+.workflow > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.workflow_link {
+  display: flex;
+}
+
+.workflow_link {
+  display: flex;
+  border-bottom: 1px solid var(--accent-cyan-gradient);
+  padding-bottom: 5px;
+  margin-top: 15px;
+  /* margin-right: auto; */
+  width: fit-content;
+  font-family: var(--font-secondary);
+  color: var(--accent-cyan-gradient);
+  gap: 0.5rem;
+}
+.workflow_title {
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  font-size: 2.5rem;
+}
+.workflow_description {
+  font-family: var(--font-secondary);
+}
+/* 2.57.00 */
