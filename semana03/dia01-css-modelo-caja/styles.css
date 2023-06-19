@@ -188,3 +188,51 @@ img {
   font-family: var(--font-secondary);
 }
 /* 2.57.00 */
+
+.testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: min(100% - 3rem, 1200px);
+  margin: 100px auto;
+  background-color: var(--primary-dark-blue-main);
+  gap: 3rem;
+}
+.testimonial {
+  background-color: var(--primary-dark-blue-testimonials);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: var(--font-secondary);
+  position: relative;
+}
+.testimonial--quote::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  z-index: -10;
+  background-image: url(./images/bg-quotes.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -30px;
+  left: -5px;
+}
+.testimonial div {
+  display: flex;
+  align-items: center;
+}
+.testimonial img {
+  border-radius: 100px;
+  height: 50px;
+}
+.testimonial > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 20px;
+}
+.testimonial h5 {
+  font-weight: var(--font-weight-regular);
+}
