@@ -1,0 +1,23 @@
+.header {
+  font-family: var(--font-primary);
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.header_nav {
+  list-style: none;
+  /* border: 1px solid red; */
+
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* 1rem = 16px*/
+}
+.navigation {
+  display: none;
+}

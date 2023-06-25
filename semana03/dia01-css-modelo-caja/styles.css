@@ -1,25 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&family=Tilt+Neon&display=swap");
 
-:root {
-  /* Fonts */
-  --font-primary: "Raleway", sans-serif;
-  --font-secondary: "Open Sans", sans-serif;
-  --font-size: 14px;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-
-  /* Colors */
-
-  --primary-dark-blue-into: hsl(217, 28%, 15%);
-  --primary-dark-blue-main: hsl(218, 28%, 13%);
-  --primary-dark-blue-footer: hsl(216, 53%, 9%);
-  --primary-dark-blue-testimonials: hsl(219, 30%, 18%);
-
-  --accent-cyan-gradient: hsl(176, 68%, 64%);
-  --accent-blue-gradient: hsl(198, 60%, 50%);
-  --accent-light-red: hsl(0, 100%, 63%);
-  --neutral-white: hsl(0, 0%, 100%);
-}
+@import url(./modules/variables.css);
+@import "./modules/hero.css";
+@import url(./modules/header.css);
 
 * {
   padding: 0px;
@@ -52,75 +35,29 @@ img {
   height: auto;
 }
 
-.header {
-  font-family: var(--font-primary);
-  border: 1px solid red;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2rem;
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
+  .header > label {
+    display: none;
+  }
 }
-.header_nav {
-  list-style: none;
-  border: 1px solid red;
-
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem; /* 1rem = 16px*/
+#menu-toogle {
+  display: none;
 }
-
-.hero {
-  border: 1px solid red;
-  display: flex; /*flex by default makes eveything iccupies the 100% of the vp width, so we need to set the align items to set the original size*/
+#menu-toogle:checked + .navigation {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  right: 0;
+  background: var(--accent-blue-gradient);
+}
+#menu-toogle:checked + .navigation .header_nav {
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-
-  width: min(100% - 3rem, 720px);
-  /* if I wish to use this command and center it to the screen, i need to use margin and auto margins for left and right */
-  margin: 0 auto;
-  background: var(--primary-dark-blue-into) url(./images/bg-curvy-desktop.svg)
-    no-repeat bottom;
-  background-size: contain;
-  padding-top: 3rem;
-  margin-top: 3rem;
 }
 
-.hero_title {
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight-bold);
-  font-size: 2.5rem;
-  line-height: 1.5;
-  text-align: left;
-  width: min(100% - 3rem, 720px);
-}
-
-.hero_text {
-  font-family: var(--font-secondary);
-  padding: 0 7rem;
-  line-height: 1.5;
-  text-align: justify;
-  width: min(100% - 3rem, 720px);
-}
-.hero_button {
-  font-family: var(--font-secondary);
-  font-weight: var(--font-weight-bold);
-  padding: 1rem 1.5rem;
-  line-height: 1.5;
-  border: none;
-  border-radius: 7rem;
-  min-width: 220px;
-  color: var(--neutral-white);
-  background: linear-gradient(
-    90deg,
-    var(--accent-cyan-gradient) 0%,
-    var(--accent-blue-gradient) 35%
-  );
-}
 .features {
   display: grid;
   grid-template-columns: 1fr;
@@ -131,7 +68,7 @@ img {
   margin: 8rem auto;
   background-color: var(--primary-dark-blue-main);
 }
-/* 3.21.00 */
+/* 3.07.00 */
 @media (min-width: 768px) {
   .features {
     grid-template-columns: repeat(2, 1fr);
@@ -281,12 +218,13 @@ img {
   padding: 3rem;
   border-radius: 10px;
   box-shadow: 0px 10px 15px -30px rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 .access input[type="text"] {
   border-radius: 1.5rem;
   border: 0px;
   padding: 1rem 2rem;
-  min-width: 25rem;
+  min-width: 100%;
 }
 .access input[type="submit"] {
   border-radius: 1.5rem;
@@ -322,11 +260,21 @@ img {
   gap: 2rem;
   margin: 0 auto;
   width: min(100% - 3rem, 76rem);
+  padding-top: 5rem;
 }
 .footer_info {
   display: grid;
-  grid-template-columns: 2fr 1fr 0.5fr 0.5fr 1fr;
+  grid-template-columns: 1fr;
   gap: 5rem;
+}
+@media (min-width: 768px) {
+  .foot_container {
+    padding-top: 0;
+  }
+  .footer_info {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr 0.5fr 1fr;
+  }
 }
 .foot_info_description {
   display: flex;
