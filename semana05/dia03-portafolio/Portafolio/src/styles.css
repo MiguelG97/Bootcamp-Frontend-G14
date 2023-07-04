@@ -1,0 +1,6 @@
+/* Somehow the fonts needs to be imported at the top line!! */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&family=Raleway:wght@400;700&family=Tilt+Neon&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
