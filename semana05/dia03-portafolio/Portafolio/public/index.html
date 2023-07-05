@@ -3,10 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mi página personal - Miguel Gutiérrez</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <h1 class="text-red-500 font-poppins">hola portfolio</h1>
+  <body class="bg-[#4F4557] font font-poppins">
+    <header
+      class="flex items-center justify-between my-9 mx-auto w-[min(100%-3rem,1440px)]"
+    >
+      <span class="text-[#FFD95A] text-[32px] font-bold">{MG}</span>
+      <nav>
+        <ul class="flex gap-6 text-white font-semibold">
+          <li class="text-[#FFB742] border-b-2 border-[#FFB742]">
+            Acerca de Mi
+          </li>
+          <li>Habilidades</li>
+          <li>Portafolio</li>
+        </ul>
+      </nav>
+      <div class="flex gap-4">
+        <img src="../images/icon-sun.svg" />
+        <img src="../images/icon-github.svg" />
+        <img src="../images/linkedin.svg" />
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="flex flex-col items-center content-center text-white gap-[6px]"
+      >
+        <h3 class="text-[32px] font-bold">
+          Hola, Soy
+          <span class="text-[#FFB742] border-b-2 border-[#FFB742]"
+            >Miguel Gutiérrez</span
+          >
+          💪
+        </h3>
+        <h1 class="text-5xl font-bold">Desarrollador web full-stack</h1>
+        <p class="text-2xl font-normal">
+          Desarrollador especializado en Javascript, React.js, Vue, Python y
+          Node.js.
+        </p>
+        <img
+          class="w-[314px] h-[314px] rounded-full my-[40px]"
+          src="../images/profilePicture.png"
+        />
+        <div class="flex gap-20">
+          <figure class="gap-4 flex flex-col">
+            <p>HTML</p>
+            <img src="../images/icon-html.svg" />
+          </figure>
+          <figure class="gap-4 flex flex-col">
+            <p>CSS</p>
+            <img src="../images/icon-css.svg" />
+          </figure>
+          <figure class="gap-4 flex flex-col">
+            <p>Javascript</p>
+            <img src="../images/icon-js.svg" />
+          </figure>
+          <figure class="gap-4 flex flex-col">
+            <p>React</p>
+            <img src="../images/icon-react.svg" />
+          </figure>
+        </div>
+      </section>
+      <section></section>
+      <section></section>
+    </main>
   </body>
 </html>
