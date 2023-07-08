@@ -42,7 +42,7 @@ ul {
 
 .hero {
   display: flex;
-
+  /* grid-template-columns: 50% 50%; */
   justify-content: center;
   align-items: center;
   width: 1440px;
